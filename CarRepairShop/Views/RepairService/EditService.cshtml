@@ -1,0 +1,75 @@
+﻿@model Service
+@{
+    ViewData["Title"] = "EditService";
+}
+
+
+<div class="container-fluid">
+
+    <form asp-action="EditService" method="post" enctype="multipart/form-data">
+        @Html.HiddenFor(x => Model.ServiceId)
+        <div class="row">
+            <div class=" col-6">
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="ServiceName" class="form-control" />
+                    <span asp-validation-for="ServiceName" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class=" col-6">
+
+                <div class="form-group">
+                    <label asp-for="Cost" class="control-label"></label>
+                    <input asp-for="Cost" class="form-control" />
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="ServiceImage" class="control-label"></label>
+                    <input asp-for="ServiceImage" type="file" class="form-control" />
+                    <span asp-validation-for="ServiceImage" class="text-danger"></span>
+                </div>
+
+
+            </div>
+
+            <div class=" col-6">
+
+                <div class="form-group">
+                    <label asp-for="Qty" class="control-label"></label>
+                    <input asp-for="Qty" class="form-control" />
+                    <span asp-validation-for="Qty" class="text-danger"></span>
+                </div>
+
+
+            </div>
+
+            <div class="col-4 offset-4">
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-success" /> |
+                    <a asp-action="Index">Back to List</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+
+
+</div>
+
+
+
