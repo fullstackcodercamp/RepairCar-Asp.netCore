@@ -1,0 +1,51 @@
+﻿@model  CustomerService
+@{
+    ViewData["Title"] = "CompleteOrder";
+}
+
+    <div class=" container">
+
+        <div class="card border-primary mb-3">
+            <div class="card-header">Our Service Payment Collection</div>
+            <div class="card-body">
+                <div class="card-text">
+
+                    <div class="alert alert-dismissible alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h4 class="alert-heading">Make Payment</h4>
+                        <p class="mb-0">Your Total Order is $@Model.TotalCost</p>
+                    </div>
+                    <form action="CompleteOrder" method="post">
+                        @Html.HiddenFor(x => x.ServiceId)
+                        @Html.HiddenFor(x => x.CustomerId)
+                        @Html.HiddenFor(x => x.CustomerServiceId)
+                        @Html.HiddenFor(x => x.TotalCost)
+                        <div class="form-group">
+                            <label class="control-label">Total Pay</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">$</span>
+                                    </div>
+                                    <input type="text" asp-for="TotalPaid" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <button class="btn btn-success" type="submit"> <i class="fa fa-money"></i> Pay Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+     
+
+
+    </div>
+

@@ -3,44 +3,54 @@
     ViewData["Title"] = "Index";
 }
 
+<div class="card border-primary mb-3" >
+    <div class="card-header">Our Service List</div>
+    <div class="card-body">
+        <h4 class="card-title"><a class="btn btn-sm btn-warning" asp-action="AddService">Add Service</a></h4>
+        <div class="card-text">
 
-    <a class="btn btn-sm btn-warning" asp-action="AddService">Add Service</a>
-<table class="table table-hover table-bordered table-striped table-responsive-md">
-    <thead>
-        <tr class="table-danger">
-            <th scope="col">service Name</th>
-            <th scope="col">Description</th>
-            <th scope="col">Cost</th>
-            <th scope="col">Qty</th>
-            <th scope="col">TotalSold</th>
-            <th scope="col">Images</th>
-            <td></td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var service in Model)
-        {
-        <tr>
-            <td>@service.ServiceName</td>
-            <td>@service.Description</td>
-            <td>$@service.Cost</td>
-            <td>@service.Qty</td>
-            <td>@service.ServiceOrders?.Count</td>
-            <td>
-                @if (service.ServiceImage != null)
-                {
-                    <img class="img img-thumbnail" style="min-height: 60px; max-width: 60px;" src="data:image;base64, @Convert.ToBase64String(service.ServiceImage)" />
-                }
-                else
-                {
-                    <p class="text-danger">No Image</p>
-                }
-            </td>
-            <td>
-                <a class="btn btn-sm btn-warning" asp-action="EditService" asp-route-id="@service.ServiceId">Edit</a> |
-                <a class="btn btn-sm btn-danger" asp-action="DeleteService" asp-route-id="@service.ServiceId" onclick="return confirm('are you sure you want to delete this service.')">Delete</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table> 
+            <table class="table table-hover table-bordered table-striped table-responsive-md">
+                <thead>
+                    <tr class="table-danger">
+                        <th scope="col">service Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Cost</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">TotalSold</th>
+                        <th scope="col">Images</th>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var service in Model)
+                    {
+                        <tr>
+                            <td>@service.ServiceName</td>
+                            <td>@service.Description</td>
+                            <td>$@service.Cost</td>
+                            <td>@service.Qty</td>
+                            <td>@service.ServiceOrders?.Count</td>
+                            <td>
+                                @if (service.ServiceImage != null)
+                                {
+                                    <img class="img img-thumbnail" style="min-height: 60px; max-width: 60px;" src="data:image;base64, @Convert.ToBase64String(service.ServiceImage)" />
+                                }
+                                else
+                                {
+                                    <p class="text-danger">No Image</p>
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-sm btn-warning" asp-action="EditService" asp-route-id="@service.ServiceId">Edit</a> |
+                                <a class="btn btn-sm btn-danger" asp-action="DeleteService" asp-route-id="@service.ServiceId" onclick="return confirm('are you sure you want to delete this service.')">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+ 

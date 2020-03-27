@@ -147,3 +147,6 @@ C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\
 C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\RepairService\AddService.cshtml.g.cs
 C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\RepairService\EditService.cshtml.g.cs
 C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\Orders\NewOrder.cshtml.g.cs
+C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\Status\PendingOrders.cshtml.g.cs
+C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\Status\CompleteOrder.cshtml.g.cs
+C:\BootCamp2020\CarRepairShop\CarRepairShop\obj\Debug\netcoreapp3.0\Razor\Views\Status\CompletedOrders.cshtml.g.cs
